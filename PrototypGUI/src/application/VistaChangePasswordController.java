@@ -1,0 +1,44 @@
+package application;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+
+import java.io.IOException;
+
+/**
+ * Controller class for the login vista.
+ */
+public class VistaChangePasswordController implements VistaContainable {
+    public VistaChangePasswordController(VistaContainer parent){
+        this.init(parent);
+    }
+
+    private VistaContainer parent;
+    @FXML private TextField idField;
+    @FXML private PasswordField pwField;
+    @FXML private PasswordField pwConfirm;
+
+    @Override
+    public void init(VistaContainer parent){
+        this.parent = parent;
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(VistaNavigator.VISTA_CHANGE_PASSWORD));
+        loader.setController(this);
+        try {
+            parent.setVista(loader.load());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void submit(ActionEvent event) {
+        if(pwField.getText().equals(pwConfirm.getText())) {
+            Dialogs.error("Konto zostało utworzone.", "Sukces!");
+        }else
+            Dialogs.error("Hasła się nie zgadzają. Pola \"Hasło\" i \"Potwierdź\" muszą być takie same!", "Pola z hasłem się różnią!");
+    }
+
+}

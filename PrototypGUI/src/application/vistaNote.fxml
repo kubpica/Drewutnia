@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet vista.css?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="vista1" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <Label text="Tytuł" />
+            <TextField>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextField>
+            <Label layoutX="47.0" layoutY="72.0" text="Treść" />
+            <TextArea prefHeight="200.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </TextArea>
+            <Label layoutX="20.0" layoutY="133.0" text="Skierowana do" />
+            <ComboBox prefWidth="150.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin>
+            </ComboBox>
+            <Label layoutX="46.0" layoutY="57.0" text="Data pojawienia" />
+            <DatePicker />
+            <Label layoutX="18.0" layoutY="163.0" text="Data zniknięcia" />
+            <DatePicker />
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#submit" text="Zapisz">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin></Button>
+      </children>
+    </VBox>
+  </children>
+</StackPane>

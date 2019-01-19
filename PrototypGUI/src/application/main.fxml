@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet vista.css?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="420.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<top>
+    <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu mnemonicParsing="false" text="Akcja">
+                <items>
+                  <MenuItem mnemonicParsing="false" onAction="#docsAction" text="Dokumenty" />
+                  <MenuItem mnemonicParsing="false" onAction="#inventorizationAction" text="Inwentaryzacja" />
+                  <MenuItem mnemonicParsing="false" onAction="#backupsAction" text="Kopie zapasowe" />
+                  <MenuItem mnemonicParsing="false" onAction="#contactsAction" text="Kontakty" />
+                  <MenuItem mnemonicParsing="false" onAction="#logInAction" text="Logowanie" />
+                  <MenuItem mnemonicParsing="false" text="Przypomnij hasło" />
+                  <MenuItem mnemonicParsing="false" text="Samouczek" />
+                  <MenuItem fx:id="menuChangePassword" mnemonicParsing="false" onAction="#changePasswordAction" text="Zmień hasło" />
+                    <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#closeAppAction" text="Zamknij" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+</top>
+<center>
+    <StackPane fx:id="vistaHolder" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+    </StackPane>
+</center>
+   <bottom>
+      <Label fx:id="bottomLabel" text="Perspektywa pracownika" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

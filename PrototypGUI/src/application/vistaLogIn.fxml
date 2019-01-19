@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?scenebuilder-stylesheet vista.css?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="vista1" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.VistaLogInController">
+  <children>
+    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+      <children>
+        <Label text="Identyfikator" />
+        <TextField fx:id="idField" alignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin></TextField>
+        <Label text="Hasło" />
+        <PasswordField fx:id="pwField" alignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin></PasswordField>
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#submit" text="Zaloguj się">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" />
+               </VBox.margin></Button>
+      </children>
+    </VBox>
+  </children>
+</StackPane>
